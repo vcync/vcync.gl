@@ -34,6 +34,45 @@
         text-align: center;
         margin-bottom: 0;
       }
+
+      @keyframes slideDown {
+        from {
+          opacity: 0;
+          transform: translateY(-100%);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0%);
+        }
+      }
+
+      @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateY(100%);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0%);
+        }
+      }
+
+      h1 span {
+        display: inline-block;
+        opacity: 0;
+      }
+
+      h1 span:nth-child(1) {
+        animation: slideDown 1.3s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+        animation-delay: 300ms;
+      }
+
+      h1 span:nth-child(2) {
+        animation: slideUp 1.3s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+        animation-delay: 300ms;
+      }
     </style>
   </head>
   <body>
